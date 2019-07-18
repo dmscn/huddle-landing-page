@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import './App.css'
+import './config/colors/colors.css'
+
 import Layout from './config/layout/layout'
 
 import Logo from './containers/Logo'
@@ -12,22 +14,20 @@ const Wrapper = styled.div`
   flex-direction: column;
 
   @media (min-width: ${Layout.mediaQueryDesktopMin}) {
-    margin: 50px;
+    padding: 50px;
   }
   @media (max-width: ${Layout.mediaQueryMobileMax}) {
-    margin: 30px;
+    padding: 30px;
   }
 `
 
 function App() {
   return (
-    <div className="App">
-      <Wrapper>
-        <Logo />
-        <MainContent />
-        <SocialNetworks />
-      </Wrapper>
-    </div>
+    <Wrapper>
+      <Logo />
+      <MainContent />
+      <SocialNetworks />
+    </Wrapper>
   )
 }
 

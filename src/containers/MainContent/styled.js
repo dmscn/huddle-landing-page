@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import Layout from '../../config/layout/layout'
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
   display: flex;
   flex: 1;
 
   @media (min-width: ${Layout.mediaQueryDesktopMin}) {
     flex-direction: row;
+    justify-content: center;
     align-items: center;
   }
   @media (max-width: ${Layout.mediaQueryMobileMax}) {
@@ -14,6 +15,15 @@ export const Wrapper = styled.div`
     margin-top: 60px;
     justify-content: space-around;
   }
+`
+
+export const TextBox = styled.div`
+  @media (min-width: ${Layout.mediaQueryDesktopMin}) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  padding: 50px;
 `
 
 export const Image = styled.img`

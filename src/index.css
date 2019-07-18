@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap');
 
-html {
+html,
+body {
   height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-  box-sizing: border-box;
   margin: 0;
-  min-height: 100%;
   font-family: 'OpenSans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,4 +16,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  height: 100%;
+  display: flex;
 }
