@@ -1,4 +1,5 @@
 {
     "workbench.colorTheme": "Shades of Purple",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontFamily": "'Operator Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
 }
