@@ -1,7 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 import './App.css'
 import './config/colors/colors.css'
+import colors from './config/colors/colors'
 
 import Layout from './config/layout/layout'
 
@@ -24,9 +25,13 @@ const Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
-      <Logo />
-      <MainContent />
-      <SocialNetworks />
+      <ThemeProvider theme={colors}>
+        <>
+          <Logo />
+          <MainContent />
+          <SocialNetworks />
+        </>
+      </ThemeProvider>
     </Wrapper>
   )
 }
