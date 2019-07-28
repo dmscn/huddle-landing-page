@@ -3,6 +3,7 @@ import Layout from '../../config/layout/layout'
 
 const Title = styled.h1`
   color: white;
+  text-align: ${props => props.center && 'center'};
 
   @media (min-width: ${Layout.mediaQueryDesktopMin}) {
     font-family: 'Poppins', sans-serif;
@@ -18,6 +19,7 @@ const Title = styled.h1`
 const Text = styled.p`
   color: white;
   letter-spacing: 0.6px;
+  text-align: ${props => props.center && 'center'};
 
   @media (min-width: ${Layout.mediaQueryDesktopMin}) {
     font-size: 1.5em;
