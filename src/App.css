@@ -1,19 +1,20 @@
 /* Desktop */
-@media (min-width: 376px) {
+@media screen and (min-width: 768px) {
   body {
-    background-image: url('assets/images/bg-desktop.svg');
+    background: url('assets/images/bg-desktop.svg');
   }
 }
 
 /* Mobile */
-@media (max-width: 375px) {
+@media screen and (max-width: 767px) {
   body {
-    background-image: url('assets/images/bg-mobile.svg');
+    background: url('assets/images/bg-mobile.svg');
   }
 }
 
 body {
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
+  background-position: right top;
   background-color: var(--color-violet);
 }
