@@ -1,25 +1,36 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons'
+import Breackpoint from 'react-socks'
 
-import { Icon } from './styled'
+import BrandIcon from '../../components/BrandIcon'
+import Box from '../../components/Box'
 
 export default function SocialNetworks() {
+  const icons = ['facebook-f', 'instagram', 'twitter']
+
   return (
     <>
-      <Icon>
-        <FontAwesomeIcon icon={faFacebookF} color="white" />
-      </Icon>
-      <Icon>
-        <FontAwesomeIcon icon={faInstagram} color="white" />
-      </Icon>
-      <Icon>
-        <FontAwesomeIcon icon={faTwitter} color="white" />
-      </Icon>
+      <Breackpoint medium down>
+        <Box align="center">
+          {icons.map(icon => (
+            <BrandIcon key={icon} icon={icon} color="white" border />
+          ))}
+        </Box>
+      </Breackpoint>
+
+      <Breackpoint large up>
+        <Box align="flex-end">
+          {icons.map(icon => (
+            <BrandIcon
+              key={icon}
+              icon={icon}
+              color="white"
+              margin=".7rem"
+              large
+              border
+            />
+          ))}
+        </Box>
+      </Breackpoint>
     </>
   )
 }

@@ -3,7 +3,6 @@ import illustrations from '../../assets/images/illustration-mockups.svg'
 
 import { Container, Image } from './styled'
 import DescriptionBox from '../DescriptionBox'
-import SocialNetworks from '../SocialNetworks'
 
 export default function MainContent() {
   return (
