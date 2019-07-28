@@ -1,42 +1,42 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import { BreakpointProvider } from 'react-socks'
+import Breackpoint, { BreakpointProvider } from 'react-socks'
 
 import './App.css'
 import './config/colors/colors.css'
 import colors from './config/colors/colors'
-import Layout from './config/layout/layout'
 
 import Logo from './containers/Logo'
 import MainContent from './containers/MainContent'
 import SocialNetworks from './containers/SocialNetworks'
+import Box from './components/Box'
 
-const Wrapper = styled.div`
+const StyledBreackpoint = styled(Breackpoint)`
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-
-  @media (min-width: ${Layout.mediaQueryDesktopMin}) {
-    padding: 50px;
-  }
-  @media (max-width: ${Layout.mediaQueryMobileMax}) {
-    padding: 30px;
-  }
+  flex: 1;
 `
 
-function App() {
+const AppContent = ({ padding }) => (
+  <Box full column justify="space-between" align="flex-start" padding={padding}>
+    <Logo />
+    <MainContent />
+    <SocialNetworks />
+  </Box>
+)
+
+export default function App() {
   return (
-    <BreakpointProvider>
-      <Wrapper>
-        <ThemeProvider theme={colors}>
-          <>
-            <Logo />
-            <MainContent />
-            <SocialNetworks />
-          </>
-        </ThemeProvider>
-      </Wrapper>
-    </BreakpointProvider>
+    <ThemeProvider theme={colors}>
+      <BreakpointProvider>
+        <StyledBreackpoint medium down>
+          <AppContent padding="2.5rem" />
+        </StyledBreackpoint>
+
+        <StyledBreackpoint large up>
+          <AppContent padding="4rem" />
+        </StyledBreackpoint>
+      </BreakpointProvider>
+    </ThemeProvider>
   )
 }
-
-export default App
