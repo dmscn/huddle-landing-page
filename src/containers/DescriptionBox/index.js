@@ -3,21 +3,25 @@ import Breackpoint from 'react-socks'
 
 import Box from '../../components/Box'
 import Button from '../../components/Button'
-import { Text, Title } from '../../components/Text'
+import * as Typography from '../../components/Typography'
+
+const STR_TITLE = 'Build The Community Your Fans Will Love'
+const STR_MESSAGE = `Huddle re-imagines the way we build communities. You have a voice, but
+so does your audience. Create connnections with your users as you engage
+in genuiune discussion.`
+const STR_BUTTON = 'Register'
 
 function TextContent({ center }) {
   return (
     <>
-      <Title bold center={center}>
-        Build The Community Your Fans Will Love
-      </Title>
-      <Text center={center}>
-        Huddle re-imagines the way we build communities. You have a voice, but
-        so does your audience. Create connnections with your users as you engage
-        in genuiune discussion.
-      </Text>
+      <Typography.Title bold center={center}>
+        {STR_TITLE}
+      </Typography.Title>
+
+      <Typography.Body center={center}>{STR_MESSAGE}</Typography.Body>
+
       <Box align={center && 'center'}>
-        <Button>Register</Button>
+        <Button>{STR_BUTTON}</Button>
       </Box>
     </>
   )
