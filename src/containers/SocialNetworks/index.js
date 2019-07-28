@@ -10,7 +10,7 @@ export default function SocialNetworks() {
   return (
     <>
       <Breackpoint medium down>
-        <Box align="center">
+        <Box justify="center">
           {icons.map(icon => (
             <BrandIcon key={icon} icon={icon} color="white" border />
           ))}
@@ -18,7 +18,7 @@ export default function SocialNetworks() {
       </Breackpoint>
 
       <Breackpoint large up>
-        <Box align="flex-end">
+        <Box justify="flex-end">
           {icons.map(icon => (
             <BrandIcon
               key={icon}
