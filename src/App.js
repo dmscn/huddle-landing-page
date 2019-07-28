@@ -1,9 +1,10 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
+import { BreakpointProvider } from 'react-socks'
+
 import './App.css'
 import './config/colors/colors.css'
 import colors from './config/colors/colors'
-
 import Layout from './config/layout/layout'
 
 import Logo from './containers/Logo'
@@ -24,15 +25,17 @@ const Wrapper = styled.div`
 
 function App() {
   return (
-    <Wrapper>
-      <ThemeProvider theme={colors}>
-        <>
-          <Logo />
-          <MainContent />
-          <SocialNetworks />
-        </>
-      </ThemeProvider>
-    </Wrapper>
+    <BreakpointProvider>
+      <Wrapper>
+        <ThemeProvider theme={colors}>
+          <>
+            <Logo />
+            <MainContent />
+            <SocialNetworks />
+          </>
+        </ThemeProvider>
+      </Wrapper>
+    </BreakpointProvider>
   )
 }
 
