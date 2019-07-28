@@ -1,15 +1,26 @@
+import React from 'react'
 import styled from 'styled-components'
-import Layout from '../../config/layout/layout'
+import Breakpoint from 'react-socks'
 
 import logo from '../../assets/icons/logo.svg'
+import Box from '../../components/Box'
 
-const Logo = styled.img.attrs({ alt: 'Logo da Huddle', src: logo })`
-  @media (min-width: ${Layout.mediaQueryDesktopMin}) {
-    width: 15em;
-  }
-  @media (max-width: ${Layout.mediaQueryMobileMax}) {
-    width: 10em;
-  }
+const StyledLogo = styled.img.attrs({ alt: 'Logo da Huddle', src: logo })`
+  width: ${props => props.width};
 `
 
-export default Logo
+export default function Logo() {
+  return (
+    <>
+      <Breakpoint medium down>
+        <Box marginBottom="4rem">
+          <StyledLogo width="10em" />
+        </Box>
+      </Breakpoint>
+
+      <Breakpoint large up>
+        <StyledLogo width="15em" />
+      </Breakpoint>
+    </>
+  )
+}

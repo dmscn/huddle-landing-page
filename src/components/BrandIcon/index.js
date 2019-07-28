@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 library.add(fab)
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +17,12 @@ export const Wrapper = styled.div`
   border-color: ${props => props.color || 'transparent'};
   border-radius: ${props => props.border && '100%'};
   border-radius: 100%;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    opacity: 0.7;
+  }
 `
 
 const BrandIcon = props => (
