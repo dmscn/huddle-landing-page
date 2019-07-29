@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/huddle-landing-page/static/css/main.f775db06.chunk.css",
+    "main.js": "/huddle-landing-page/static/js/main.391a8158.chunk.js",
+    "main.js.map": "/huddle-landing-page/static/js/main.391a8158.chunk.js.map",
+    "runtime~main.js": "/huddle-landing-page/static/js/runtime~main.2015dbcf.js",
+    "runtime~main.js.map": "/huddle-landing-page/static/js/runtime~main.2015dbcf.js.map",
+    "static/js/2.557bf0d6.chunk.js": "/huddle-landing-page/static/js/2.557bf0d6.chunk.js",
+    "static/js/2.557bf0d6.chunk.js.map": "/huddle-landing-page/static/js/2.557bf0d6.chunk.js.map",
+    "index.html": "/huddle-landing-page/index.html",
+    "precache-manifest.c21d19891a6eeb03d802a7186b0f2a9d.js": "/huddle-landing-page/precache-manifest.c21d19891a6eeb03d802a7186b0f2a9d.js",
+    "service-worker.js": "/huddle-landing-page/service-worker.js",
+    "static/css/main.f775db06.chunk.css.map": "/huddle-landing-page/static/css/main.f775db06.chunk.css.map",
+    "static/media/App.css": "/huddle-landing-page/static/media/bg-mobile.3b9d812e.svg",
+    "static/media/illustration-mockups.svg": "/huddle-landing-page/static/media/illustration-mockups.129756c2.svg",
+    "static/media/logo.svg": "/huddle-landing-page/static/media/logo.f5d36b37.svg"
+  }
+}
